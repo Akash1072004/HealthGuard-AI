@@ -16,7 +16,7 @@ interface AgentLog {
 const allAgentData: AgentLog[] = agentData as AgentLog[];
 
 const AgentDetailPage = () => {
-  const { agentType } = useParams<{ agentType: string }>();
+  const { agentType } = useParams();
 
   if (!agentType) {
     return (
@@ -27,7 +27,6 @@ const AgentDetailPage = () => {
     );
   }
 
-  // Filter data specific to this agent type (case-insensitive for URL routing)
   const agentSpecificData = allAgentData.filter(
     (agent) => agent.agentType.toUpperCase() === agentType.toUpperCase()
   );
@@ -38,7 +37,9 @@ const AgentDetailPage = () => {
     return (
       <div className="p-8">
         <h1 className="text-4xl font-bold text-primary mb-4">{title}</h1>
-        <p className="text-lg text-muted-foreground">No recent activity found for this agent type: {agentType}</p>
+        <p className="text-lg text-muted-foreground">
+          No recent activity found for this agent type: {agentType}
+        </p>
       </div>
     );
   }
