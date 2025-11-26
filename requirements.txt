@@ -1,0 +1,26 @@
+# --- FASTAPI + SERVER ---
+fastapi==0.115.0
+uvicorn==0.30.4
+
+# --- GOOGLE GENAI (Official SDK) ---
+google-genai==0.3.0
+
+# --- ML / AI ---
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.2
+
+# PyTorch CPU (Windows-compatible)
+torch==2.2.0+cpu
+torchaudio==2.2.0+cpu
+torchvision==0.17.0+cpu
+-f https://download.pytorch.org/whl/torch_stable.html
+
+# --- ILP Optimization ---
+pulp==2.7.0
+
+# --- Utils ---
+python-dotenv==1.0.1
+
+# --- Optional (for plotting/debugging) ---
+plotly==5.22.0
