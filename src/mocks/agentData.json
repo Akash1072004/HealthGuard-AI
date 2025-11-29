@@ -18,6 +18,6 @@
     "name": "Resource Optimizer Agent",
     "description": "Forecasts resource needs and optimizes distribution.",
     "status": "SUCCESS",
-    "link": "/surge-forecasting"
+    "link": "/agents/resource-optimizer"
   }
 ]

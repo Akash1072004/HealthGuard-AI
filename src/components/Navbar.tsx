@@ -54,6 +54,11 @@ const components: { title: string; href: string; description: string }[] = [
     href: "/contact-form",
     description: "Get in touch with the HealthGuard AI team.",
   },
+  {
+    title: "Resource Optimizer Agent",
+    href: "/agents/resource_optimizer",
+    description: "View resource optimization recommendations.",
+  },
 ];
 
 const Navbar = () => {

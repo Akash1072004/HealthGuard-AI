@@ -14,9 +14,13 @@ import ImpactMetricsPage from "./pages/ImpactMetricsPage";
 import FAQPage from "./pages/FAQPage";
 import ForecastPage from "./pages/ForecastPage";
 import DataVisualizationPage from "./pages/DataVisualizationPage";
+import ResourcesPage from "./pages/ResourcesPage";
+import AgentDetailPage from "./pages/AgentDetailPage";
 import ContactFormPage from "./pages/ContactFormPage";
+import ResourceOptimizerAgentPage from "./pages/ResourceOptimizerAgentPage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
+import AdvisoryPage from "./pages/AdvisoryPage";
 import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -41,6 +45,9 @@ const App = () => (
             <Route path="/signin" element={<Layout><SignInPage /></Layout>} />
             <Route path="/signup" element={<Layout><SignUpPage /></Layout>} />
             <Route path="/surge-forecasting" element={<Layout><ForecastPage /></Layout>} />
+            <Route path="/resource-optimizer" element={<Layout><ResourceOptimizerAgentPage /></Layout>} />
+            <Route path="/agents/:agentType" element={<Layout><AgentDetailPage /></Layout>} />
+            <Route path="/advisory" element={<Layout><AdvisoryPage /></Layout>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -20,13 +20,15 @@ const HealthGuardLanding = () => {
       icon: Zap,
       title: "Resource Optimizer Agent",
       description: "Optimizes bed allocation, staff scheduling, and equipment distribution across facilities.",
-      image: "recomend resource.jpg"
+      image: "recomend resource.jpg",
+      path: "/resource-optimizer"
     },
     {
       icon: Users,
       title: "Persona Analyzer Agent",
       description: "Creates detailed patient profiles based on demographics, health history, and risk factors.",
-      image: "persona.jpg"
+      image: "persona.jpg",
+      path: "/advisory"
     },
     {
       icon: Shield,
