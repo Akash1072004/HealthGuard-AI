@@ -5,6 +5,7 @@ import { ArrowRight, Hospital, Users, Brain, Shield, Activity, Zap, Heart, BarCh
 import heroImage from "@/assets/hero image.png";
 import SocialShare from "@/components/SocialShare";
 import symp from "../../Images1/symptom.jpg";
+import { Link } from "react-router-dom";
 
 const HealthGuardLanding = () => {
   const agents = [
@@ -12,7 +13,8 @@ const HealthGuardLanding = () => {
       icon: BarChart3,
       title: "Surge Forecasting Agent",
       description: "Predicts hospital patient inflow using festival calendars, weather data, and historical patterns.",
-      image: "patient inflow.jpg"
+      image: "patient inflow.jpg",
+      path: "/surge-forecasting"
     },
     {
       icon: Zap,
@@ -239,24 +241,25 @@ const HealthGuardLanding = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {agents.map((agent, index) => (
-              <Card
-                key={index}
-                className="bg-gradient-card shadow-medium hover:shadow-large transition-all duration-300 border-primary/10 hover:border-primary/30 animate-scale-in dark:border-primary/50 dark:hover:border-primary/70"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardHeader className="flex flex-col items-center text-center">
-                  {agent.image && (
-                    <img src={agent.image} alt={agent.title} className="w-full h-32 object-cover object-[center_bottom_75%] rounded-lg mb-4 border-2 border-primary/50 shadow-md" />
-                  )}
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <agent.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-lg">{agent.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{agent.description}</p>
-                </CardContent>
-              </Card>
+              <Link to={agent.path || "#"} key={index}>
+                <Card
+                  className="bg-gradient-card shadow-medium hover:shadow-large transition-all duration-300 border-primary/10 hover:border-primary/30 animate-scale-in dark:border-primary/50 dark:hover:border-primary/70 cursor-pointer"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardHeader className="flex flex-col items-center text-center">
+                    {agent.image && (
+                      <img src={agent.image} alt={agent.title} className="w-full h-32 object-cover object-[center_bottom_75%] rounded-lg mb-4 border-2 border-primary/50 shadow-md" />
+                    )}
+                    <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
+                      <agent.icon className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                    <CardTitle className="text-lg">{agent.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">{agent.description}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>

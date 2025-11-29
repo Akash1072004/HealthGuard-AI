@@ -1,26 +1,23 @@
 [
   {
     "id": 1,
-    "timestamp": "2025-11-25T10:00:00Z",
-    "agentType": "PATIENT_AGENT",
+    "name": "Patient Agent",
+    "description": "Manages patient data and routing.",
     "status": "SUCCESS",
-    "message": "Patient data processed.",
-    "actionTaken": "Updated patient status"
+    "link": "/agent/1"
   },
   {
     "id": 2,
-    "timestamp": "2025-11-25T10:05:00Z",
-    "agentType": "HOSPITAL_AGENT",
+    "name": "Hospital Agent",
+    "description": "Handles hospital resource allocation.",
     "status": "ERROR",
-    "message": "Resource allocation failed: Low stock.",
-    "actionTaken": null
+    "link": "/agent/2"
   },
   {
     "id": 3,
-    "timestamp": "2025-11-25T10:10:00Z",
-    "agentType": "PATIENT_AGENT",
+    "name": "Resource Optimizer Agent",
+    "description": "Forecasts resource needs and optimizes distribution.",
     "status": "SUCCESS",
-    "message": "Patient routed to appropriate department.",
-    "actionTaken": "Sent notification"
+    "link": "/surge-forecasting"
   }
 ]

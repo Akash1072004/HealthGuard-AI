@@ -12,6 +12,7 @@ import PatientJourneyPage from "./pages/PatientJourneyPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
 import ImpactMetricsPage from "./pages/ImpactMetricsPage";
 import FAQPage from "./pages/FAQPage";
+import ForecastPage from "./pages/ForecastPage";
 import DataVisualizationPage from "./pages/DataVisualizationPage";
 import ContactFormPage from "./pages/ContactFormPage";
 import SignInPage from "./pages/SignInPage";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/contact-form" element={<Layout><ContactFormPage /></Layout>} />
             <Route path="/signin" element={<Layout><SignInPage /></Layout>} />
             <Route path="/signup" element={<Layout><SignUpPage /></Layout>} />
+            <Route path="/surge-forecasting" element={<Layout><ForecastPage /></Layout>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
