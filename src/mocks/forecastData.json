@@ -1,16 +1,12 @@
 {
   "forecasts": [
-    { "date": "2025-11-30", "patients": 120 },
-    { "date": "2025-12-01", "patients": 135 },
-    { "date": "2025-12-02", "patients": 140 },
-    { "date": "2025-12-03", "patients": 155 },
-    { "date": "2025-12-04", "patients": 130 },
-    { "date": "2025-12-05", "patients": 110 },
-    { "date": "2025-12-06", "patients": 105 }
+    { "date": "2025-11-30", "patients": 110 },
+    { "date": "2025-12-01", "patients": 130 },
+    { "date": "2025-12-02", "patients": 145 }
   ],
   "geminiSuggestion": {
-    "staffingPlan": "Peak days (Dec 2, 3) require +5 nurses and +2 doctors.",
-    "bedsToReserve": "Reserve 20% of forecasted admissions daily, averaging 25 beds.",
-    "suppliesToStock": "Stock 50 oxygen cylinders and 100 doses of emergency meds."
+    "staffingPlan": "Add 5 extra nurses during peak hours.",
+    "bedsToReserve": "Keep 12 isolation beds ready.",
+    "suppliesToStock": "Stock oxygen cylinders and IV fluids."
   }
 }
