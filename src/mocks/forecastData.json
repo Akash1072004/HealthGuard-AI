@@ -1,0 +1,12 @@
+{
+  "forecasts": [
+    { "date": "2025-11-30", "patients": 110 },
+    { "date": "2025-12-01", "patients": 130 },
+    { "date": "2025-12-02", "patients": 145 }
+  ],
+  "geminiSuggestion": {
+    "staffingPlan": "Add 5 extra nurses during peak hours.",
+    "bedsToReserve": "Keep 12 isolation beds ready.",
+    "suppliesToStock": "Stock oxygen cylinders and IV fluids."
+  }
+}

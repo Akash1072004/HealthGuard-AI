@@ -1,22 +1,28 @@
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import agentData from "@/mocks/agentData.json";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 
-// Define a type for agent data structure
-interface AgentLog {
+
+// Define a type for general agent log data structure (Renamed to AgentSummary based on mock data)
+interface AgentSummary {
   id: number;
-  timestamp: string;
-  agentType: string;
+  name: string;
+  description: string;
   status: string;
-  message: string;
-  actionTaken: string | null;
+  link: string;
 }
 
-const allAgentData: AgentLog[] = agentData as AgentLog[];
+const allAgentData: AgentSummary[] = agentData as AgentSummary[];
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const AgentDetailPage = () => {
   const { agentType } = useParams();
+  
+  const title = (agentType || "Agent").replace(/_/g, ' ') + " Details";
 
   if (!agentType) {
     return (
@@ -27,11 +33,13 @@ const AgentDetailPage = () => {
     );
   }
 
-  const agentSpecificData = allAgentData.filter(
-    (agent) => agent.agentType.toUpperCase() === agentType.toUpperCase()
-  );
+  // --- General Agent Log Logic (Fallback/Other Agents) ---
 
-  const title = agentType.replace(/_/g, ' ') + " Agent Details";
+  // Since agentData.json holds summary data, we look for the specific agent by name/title
+  // Note: This section should ideally fetch detailed logs, but using mock summary data for now.
+  const agentSpecificData = allAgentData.filter(
+    (agent) => agent.name.toLowerCase().replace(/ /g, '_') === agentType.toLowerCase()
+  );
 
   if (!agentSpecificData.length) {
     return (
@@ -50,27 +58,29 @@ const AgentDetailPage = () => {
       
       <Card>
         <CardHeader>
-          <CardTitle>Recent Activity Log ({agentSpecificData.length} entries)</CardTitle>
+          <CardTitle>{agentSpecificData[0].name} Status</CardTitle>
         </CardHeader>
         <CardContent>
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[100px]">Time</TableHead>
-                <TableHead className="w-[100px]">Status</TableHead>
-                <TableHead>Message</TableHead>
-                <TableHead>Action Taken</TableHead>
+                <TableHead className="w-[150px]">Metric</TableHead>
+                <TableHead>Value</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {agentSpecificData.map((data) => (
-                <TableRow key={data.id}>
-                  <TableCell className="font-medium">{data.timestamp}</TableCell>
-                  <TableCell>{data.status}</TableCell>
-                  <TableCell>{data.message}</TableCell>
-                  <TableCell>{data.actionTaken || "N/A"}</TableCell>
+                <TableRow>
+                  <TableCell className="font-medium">Description</TableCell>
+                  <TableCell>{agentSpecificData[0].description}</TableCell>
                 </TableRow>
-              ))}
+                <TableRow>
+                  <TableCell className="font-medium">Operational Status</TableCell>
+                  <TableCell>{agentSpecificData[0].status}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-medium">Mock Link</TableCell>
+                  <TableCell>{agentSpecificData[0].link}</TableCell>
+                </TableRow>
             </TableBody>
           </Table>
         </CardContent>
