@@ -1,73 +1,160 @@
-# Welcome to your Lovable project
+🏥 HealthGuard AI
 
-## Project info
+Predictive Healthcare "Operating System" for Indian Hospitals > Built for MumbaiHacks 2025
 
-**URL**: https://lovable.dev/projects/beb869c1-2b2a-4143-a2f3-c1ab9da8389c
+📖 Overview
 
-## How can I edit this code?
+HealthGuard AI is an agentic AI system designed to solve the critical problem of unpredictable patient surges in Indian hospitals during festivals (Diwali, Ganesh Chaturthi), pollution spikes, and epidemics.
 
-There are several ways of editing your application.
+Unlike simple dashboards, HealthGuard AI acts as a collaborative team of autonomous agents that move from Prediction → Resource Optimization → Public Action without human intervention.
 
-**Use Lovable**
+🤖 The Agentic Architecture
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/beb869c1-2b2a-4143-a2f3-c1ab9da8389c) and start prompting.
+Our system is built around three core collaborating agents:
 
-Changes made via Lovable will be committed automatically to this repo.
+1. 🧠 Surge Forecasting Agent (The Brain)
 
-**Use your preferred IDE**
+Role: Predicts the when, where, and what of patient surges.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Tech: Uses LSTM (Long Short-Term Memory) networks on historical hospital admissions, AQI data, and Indian festival calendars.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Output: "Predicted +40% rise in respiratory cases in Ward F-North in 48 hours."
 
-Follow these steps:
+2. 🤖 Resource Optimizer Agent (The Commander)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Role: Autonomously manages hospital logistics in response to predictions.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Tech: Rule-based Logic Engine (simulating Deep Reinforcement Learning) to optimize bed and staff allocation.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Output: Actionable commands like "Allocating 15 additional ICU beds" or "Deploying 3 pulmonologists."
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. 📢 Preventive Advisory Agent (The Communicator)
+
+Role: Proactive public health communication.
+
+Tech: NLP & GenAI to create personalized, multilingual alerts (English, Hindi, Marathi).
+
+Output: Targeted WhatsApp/SMS alerts: "Namaste Rahul, AQI is severe today. Please avoid outdoor travel."
+
+🚀 Key Features
+
+🇮🇳 Indian Context First: Specifically trained on data related to Indian festivals (Diwali, Holi) and local pollution patterns.
+
+🗣️ Multilingual Support: Generates advisories in English, Hindi, and Marathi to reach the widest population.
+
+⚡ Real-Time "Command Center": A unified dashboard showing live agent collaboration feeds.
+
+📱 WhatsApp Integration: Simulates direct-to-patient alerts on a realistic mobile interface.
+
+📊 Interactive Visualizations: Dynamic charts comparing capacity vs. predicted demand.
+
+🛠️ Tech Stack
+
+Frontend
+
+Framework: React (Vite) + TypeScript
+
+Styling: Tailwind CSS + Shadcn/UI
+
+Icons: Lucide React
+
+Runtime: Bun
+
+Backend & AI (Architecture)
+
+Core Logic: Python (Flask API)
+
+Forecasting: LSTM / Prophet (Time-series analysis)
+
+Orchestration: LangChain (Agent triggers)
+
+Data Sources
+
+Pollution: AQICN Historical Data (Mumbai)
+
+Calendar: Indian Holiday Calendar 2023-2025
+
+Health Data: Synthetic dataset modeled on HMIS aggregate trends.
+
+📸 Screenshots
+
+(Add your project screenshots here)
+
+Main Dashboard
+
+Preventive Agent
+
+
+
+
+
+🏃‍♂️ Getting Started
+
+Prerequisites
+
+Node.js or Bun installed.
+
+Python 3.9+ (for backend agents).
+
+Installation
+
+Clone the repository
+
+git clone [https://github.com/Akash1072004/HealthGuard-AI.git](https://github.com/Akash1072004/HealthGuard-AI.git)
+cd HealthGuard-AI
+
+
+Install Frontend Dependencies
+
+bun install
+# or
+npm install
+
+
+Run the Development Server
+
+bun run dev
+# or
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Open in Browser
+Navigate to http://localhost:5173 to see the Agent Command Center.
 
-**Use GitHub Codespaces**
+📂 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+HealthGuard-AI/
+├── src/
+│   ├── components/         # Reusable UI components (Cards, Buttons)
+│   ├── layouts/            # Dashboard sidebar structure
+│   ├── mocks/              # Dummy data for agent simulation
+│   ├── pages/
+│   │   ├── DashboardHome.tsx      # Main Agent Feed
+│   │   ├── ForecastPage.tsx       # Surge visualizations
+│   │   ├── ResourcesPage.tsx      # Resource Optimizer interface
+│   │   ├── AdvisoryPage.tsx       # Persona Analyzer (Patient Risk)
+│   │   └── PreventiveAdvisoryPage.tsx # Public Alerts (WhatsApp Mockup)
+│   ├── App.tsx             # Routing logic
+│   └── main.tsx            # Entry point
+└── public/                 # Static assets
 
-## What technologies are used for this project?
 
-This project is built with:
+🔮 Future Roadmap
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+[ ] ABDM Integration: Connect with Ayushman Bharat Digital Mission for real patient health records.
 
-## How can I deploy this project?
+[ ] IoT Integration: Real-time data form Smart Ventilators.
 
-Simply open [Lovable](https://lovable.dev/projects/beb869c1-2b2a-4143-a2f3-c1ab9da8389c) and click on Share -> Publish.
+[ ] Voice Agents: IVR calls for elderly patients who cannot read SMS.
 
-## Can I connect a custom domain to my Lovable project?
+👥 Contributors
 
-Yes, you can!
+HealthGuard Innovators Team
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Akash - Full Stack Developer
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+(Add other team members)
+
+📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
