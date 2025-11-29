@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Hospital, Users, Brain, Shield, Activity, Zap, Heart, BarChart3, MessageSquare, Calendar, Target, Globe } from "lucide-react";
 import heroImage from "@/assets/hero image.png";
 import SocialShare from "@/components/SocialShare";
+import symp from "../../Images1/symptom.jpg";
 
 const HealthGuardLanding = () => {
   const agents = [
@@ -31,18 +32,18 @@ const HealthGuardLanding = () => {
       description: "Delivers personalized, multilingual health advisories and preventive care recommendations.",
       image: "Preventive .jpg"
     },
-    {
-      icon: MessageSquare,
-      title: "Symptom Checker Agent",
-      description: "AI-powered conversational interface for initial symptom assessment and triage.",
-      image: "symptom.jpg"
-    },
-    {
-      icon: Globe,
-      title: "Grid Balancer Agent",
-      description: "Creates a smart, city-wide hospital network. Prevents overcrowding by recommending real-time patient load balancing and resource sharing between facilities.",
-      image: "grid balancer.jpg"
-    }
+    // {
+    //   icon: MessageSquare,
+    //   title: "Symptom Checker Agent",
+    //   description: "AI-powered conversational interface for initial symptom assessment and triage.",
+    //   image: "symptom.jpg"
+    // },
+    // {
+    //   icon: Globe,
+    //   title: "Grid Balancer Agent",
+    //   description: "Creates a smart, city-wide hospital network. Prevents overcrowding by recommending real-time patient load balancing and resource sharing between facilities.",
+    //   image: "grid balancer.jpg"
+    // }
   ];
 
   const techStack = [
@@ -61,11 +62,11 @@ const HealthGuardLanding = () => {
       title: "Patient App Notification",
       description: "High-risk patients receive personalized multilingual advisories about air quality and precautions."
     },
-    {
-      step: "03",
-      title: "Symptom Checker Chat",
-      description: "Patients interact with AI for symptoms, get triage recommendations, and preventive guidance."
-    }
+    // {
+    //   step: "03",
+    //   title: "Symptom Checker Chat",
+    //   description: "Patients interact with AI for symptoms, get triage recommendations, and preventive guidance."
+    // }
   ];
 
   const audience = [
