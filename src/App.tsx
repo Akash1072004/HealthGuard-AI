@@ -21,6 +21,7 @@ import ResourceOptimizerAgentPage from "./pages/ResourceOptimizerAgentPage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import AdvisoryPage from "./pages/AdvisoryPage";
+import PreventiveAdvisoryPage from "./pages/PreventiveAdvisoryPage";
 import Layout from "./components/Layout";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/resource-optimizer" element={<Layout><ResourceOptimizerAgentPage /></Layout>} />
             <Route path="/agents/:agentType" element={<Layout><AgentDetailPage /></Layout>} />
             <Route path="/advisory" element={<Layout><AdvisoryPage /></Layout>} />
+            <Route path="/preventive-advisory" element={<Layout><PreventiveAdvisoryPage /></Layout>} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

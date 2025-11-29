@@ -34,7 +34,8 @@ const HealthGuardLanding = () => {
       icon: Shield,
       title: "Preventive Advisory Agent",
       description: "Delivers personalized, multilingual health advisories and preventive care recommendations.",
-      image: "Preventive .jpg"
+      image: "Preventive .jpg",
+      path: "/preventive-advisory"
     },
     // {
     //   icon: MessageSquare,

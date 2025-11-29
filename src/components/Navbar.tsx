@@ -56,8 +56,13 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Resource Optimizer Agent",
-    href: "/agents/resource_optimizer",
+    href: "/resource-optimizer",
     description: "View resource optimization recommendations.",
+  },
+  {
+    title: "Preventive Advisory Agent",
+    href: "/preventive-advisory",
+    description: "📢 Public health alert system.",
   },
 ];
 
